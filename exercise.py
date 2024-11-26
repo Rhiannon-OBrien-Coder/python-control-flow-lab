@@ -85,26 +85,58 @@
 # - Convert the string input to an integer using `int()`.
 # - Apply conditional logic to perform the correct age calculation based on the dog's age.
 
-def calculate_dog_years(input):
+# def calculate_dog_years(input):
+#     # Your control flow logic goes here
+#     try:
+#         age = int(input)
+#         if age > 2:
+#             first_two = age - 2
+#             final_age = first_two * 7 + 20
+#             print(f"The dog's age in dog years is {final_age}.")
+#         elif age == 1:
+#             print("The dog's age in dog years is 10.")
+#         elif age == 2:
+#             print("The dog's age in dog years is 20.")
+#         elif age <= 0:
+#             print("Please input a valid dog age.")
+#     except ValueError:
+#         print("Please input a valid dog age.")
+
+# # Call the function
+# calculate_dog_years(input("Input a dog's age: "))
+
+# Exercise 4: Weather Advice
+#
+# Write a Python script named `weather_advice` that provides clothing advice based on weather conditions.
+#
+# Requirements:
+# - The script should prompt the user to enter if it is cold (yes/no).
+# - Then, ask if it is raining (yes/no).
+# - Use logical operators to determine clothing advice:
+#   - If it is cold AND raining, print "Wear a waterproof coat."
+#   - If it is cold BUT NOT raining, print "Wear a warm coat."
+#   - If it is NOT cold but raining, print "Carry an umbrella."
+#   - If it is NOT cold AND NOT raining, print "Wear light clothing."
+#
+# Hints:
+# - Use logical operators (`AND`, `OR`, `NOT`) in your if statements to handle multiple conditions.
+
+def weather_advice(cold, rain):
     # Your control flow logic goes here
     try:
-        age = int(input)
-        if age > 2:
-            first_two = age - 2
-            final_age = first_two * 7 + 20
-            print(f"The dog's age in dog years is {final_age}.")
-        elif age == 1:
-            print("The dog's age in dog years is 10.")
-        elif age == 2:
-            print("The dog's age in dog years is 20.")
-        elif age <= 0:
-            print("Please input a valid dog age.")
+        if cold.lower() == "yes" and rain.lower() == "yes":
+            print("Wear a waterproof coat.")
+        elif cold.lower() == "no" and rain.lower() == "yes":
+            print("Carry an umbrella.")
+        elif cold.lower() == "yes" and rain.lower() == "no":
+            print("Wear a warm coat.")
+        elif cold.lower() == "no" and rain.lower() == "no":
+            print("Wear light clothing.")
     except ValueError:
-        print("Please input a valid dog age.")
+        print("Please answer with yes or no.")
 
 # Call the function
-calculate_dog_years(input("Input a dog's age: "))
+weather_advice(input("Is it cold? (yes/no): "), input("Is it raining? (yes/no): "))
 
-# Exercise 4
 
 # Exercise 5
