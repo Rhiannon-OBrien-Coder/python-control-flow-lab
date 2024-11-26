@@ -50,24 +50,60 @@
 # - Use `int()` to convert the input to an integer. Ensure to handle any conversion errors gracefully.
 # - Use a conditional statement to check if the age meets the minimum voting age requirement.
 
-def check_voting_eligibility(input):
+# def check_voting_eligibility(input):
+#     # Your control flow logic goes here
+#     try:
+#         age = int(input)
+#         voting_age = 18
+#         if age < 1:
+#             print("Error, please enter a valid age.")
+#         elif age < voting_age:
+#             print("You can't vote.")
+#         elif age >= voting_age:
+#             print("You can vote!")
+#     except ValueError:
+#         print("Please enter a number.")
+
+# # Call the function
+# check_voting_eligibility(input("Please enter your age: "))
+
+# Exercise 3: Calculate Dog Years
+#
+# Write a Python function named `calculate_dog_years` that calculates a dog's age in dog years.
+# Fill in the logic to perform the calculation inside the function.
+#
+# Function Details:
+# - Prompt the user to enter a dog's age: "Input a dog's age: "
+# - Calculate the dog's age in dog years:
+#      - The first two years of the dog's life count as 10 dog years each.
+#      - Each subsequent year counts as 7 dog years.
+# - Print the calculated age: "The dog's age in dog years is xx."
+# - Replace 'xx' with the calculated dog years.
+#
+# Hints:
+# - Use the `input()` function to capture user input.
+# - Convert the string input to an integer using `int()`.
+# - Apply conditional logic to perform the correct age calculation based on the dog's age.
+
+def calculate_dog_years(input):
     # Your control flow logic goes here
     try:
         age = int(input)
-        voting_age = 18
-        if age < 1:
-            print("Error, please enter a valid age.")
-        elif age < voting_age:
-            print("You can't vote.")
-        elif age >= voting_age:
-            print("You can vote!")
+        if age > 2:
+            first_two = age - 2
+            final_age = first_two * 7 + 20
+            print(f"The dog's age in dog years is {final_age}.")
+        elif age == 1:
+            print("The dog's age in dog years is 10.")
+        elif age == 2:
+            print("The dog's age in dog years is 20.")
+        elif age <= 0:
+            print("Please input a valid dog age.")
     except ValueError:
-        print("Please enter a number.")
+        print("Please input a valid dog age.")
 
 # Call the function
-check_voting_eligibility(input("Please enter your age: "))
-
-# Exercise 3
+calculate_dog_years(input("Input a dog's age: "))
 
 # Exercise 4
 
