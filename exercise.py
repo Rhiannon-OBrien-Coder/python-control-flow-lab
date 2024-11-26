@@ -132,6 +132,8 @@
 #             print("Wear a warm coat.")
 #         elif cold.lower() == "no" and rain.lower() == "no":
 #             print("Wear light clothing.")
+#         else:
+#             print("Please answer with yes or no.")
 #     except ValueError:
 #         print("Please answer with yes or no.")
 
